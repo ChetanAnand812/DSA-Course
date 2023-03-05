@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 int binarySearch(int arr[], int size, int target) {
@@ -33,26 +35,13 @@ int binarySearch(int arr[], int size, int target) {
 
 
 int main(){
-    int arr[100];
-    int size;
-    cout<<"enter size of array"<<endl;
-    cin>>size;
-    cout<<"enter element of array"<<endl;
-    for (int i = 0; i < size; i++){
-        cin>>arr[i];
+    vector<int> v{1,2,3,4,5,6};
+
+    if(binary_search(v.begin(), v.end(), 3)) {
+        cout<<"Found"<<endl;
     }
-
-    int target;
-    cout<<"enter which no you want to find"<<endl;
-    cin>>target;
-
-    int indexOftarget = binarySearch(arr, size, target);
-
-    if(indexOftarget == -1) {
-        cout << "target not found" << endl;
-    }
-    else  {
-        cout << "target found at " << indexOftarget <<" index " << endl;
+    else{
+        cout<<"Not Found"<<endl;
     }
 
     return 0;
