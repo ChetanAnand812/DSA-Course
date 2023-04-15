@@ -18,6 +18,7 @@ int main(){
     while(true) {
         if(start > end){
             break;
+        }
             
         if(start == end){
             cout<<arr[start]<<" ";
@@ -29,11 +30,8 @@ int main(){
         
         start++;
         end--;
-        }
+    
     }
 
-    for(int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
-    }
-
+   
 }
