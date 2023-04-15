@@ -1,37 +1,35 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-    int arr[100];
-    int n;
-    cout<<"Enter size: ";
-    cin>>n;
-
-    cout<<"Enter element of array: ";
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
-    }
-
-    int key;
-    cout<<"Enter key: ";
-    cin>>key;
+bool find(int arr[],int size, int key){
     
-    bool flag = 0;
-    // 0 -> not found
-    // 1-> found
-    for(int i=0;i<n;i++){
-
-        if(arr[i] == key){
-            // found
-            flag = 1;
-            break;
+    for(int i=0;i<size;i++){
+        if(arr[i] = key){
+            return true;
         }
     }
+    return false;
+}
 
-    if(flag){
-        cout<<"Found";
+int main(){
+    int arr[100];
+    int size;
+    cout<<"Enter size: ";
+    cin>>size;
+
+    cout<<"Enter element of array: "<<endl;
+    for(int i=0;i<size;i++){
+        cin>>arr[i];
+    }
+    
+    int key;
+    cout<<"Enter Key: ";
+    cin>>key;
+
+    if(find(arr, size,key)){
+        cout<<"Found"<<endl;
     }
     else{
-        cout<<"Not found";
+        cout<<"Not Found"<<endl;
     }
 }
