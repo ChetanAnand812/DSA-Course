@@ -2,7 +2,7 @@
 using namespace std;
 
 bool find(int arr[],int size, int key){
-    
+
     for(int i=0;i<size;i++){
         if(arr[i] = key){
             return true;
@@ -26,6 +26,7 @@ int main(){
     cout<<"Enter Key: ";
     cin>>key;
 
+   // Function call
     if(find(arr, size,key)){
         cout<<"Found"<<endl;
     }

@@ -13,7 +13,7 @@ int main(){
     }
 
     int numZero = 0;
-    int numOne = 1;
+    int numOne = 0;
     for(int i=0;i<n;i++){
 
         if(arr[i] == 0){
