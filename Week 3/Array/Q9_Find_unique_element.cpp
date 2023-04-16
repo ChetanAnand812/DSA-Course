@@ -10,6 +10,7 @@ int findUnique(vector<int> arr){
     return ans;
 }
 
+
 int main(){
     int n; 
     cout<<"enter n: ";
