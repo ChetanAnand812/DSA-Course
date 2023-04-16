@@ -22,8 +22,14 @@ int main(){
         }
     }
     // print ans
-    for(auto value: ans){
-        cout<<value<<" ";
+    // for(auto value: ans){
+    //     cout<<value<<" ";
+    // }
+    // cout<<endl;
+
+    cout<<"Printing ans array "<<endl;
+    for(int i=0; i<ans.size(); i++){
+        cout<< ans[i] <<" ";
     }
-    cout<<endl;
+    return 0;
 }
