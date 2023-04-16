@@ -13,8 +13,7 @@ int main(){
         cin>>arr[i];
     }
 
-    int sum = 50;
-
+    int sum = 80;
     // print all pairs
     // outer loop will traverse for each element
     for(int i=0; i<arr.size(); i++){
@@ -28,7 +27,7 @@ int main(){
                 int element3 = arr[k];
 
                 if(element1 + element2 + element3 == sum){
-                cout<<"Pair sum of 50 is:-> "<< element1<<","<<element2<<","<<element3<<endl;
+                cout<<"Triplet sum of 50 is:-> "<< element1<<","<<element2<<","<<element3<<endl;
             }
             }
         }
