@@ -16,7 +16,7 @@ int main(){
     int start = 0;
     int end = arr.size() - 1;
 
-    for(int i=0; i<=end;){
+    for(int i=0; start<=end;){
        
         if(arr[i] == 0){
             // swap from left
@@ -33,8 +33,13 @@ int main(){
     }
  
     // Print
-    for(auto value: arr){
-        cout<<value<<" ";
+    //for(auto value: arr){
+       // cout<<value<<" ";
+    //}
+
+    cout<<"Printing ans array "<<endl;
+    for(int i=0; i<arr.size(); i++){
+        cout<< arr[i] <<" ";
     }
     cout<<endl;
     return 0;
