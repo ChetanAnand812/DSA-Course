@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// Element should be in monotonic order(accending or decending)
+
 int binarySearch(int arr[], int size, int target) {
   int start = 0;
   int end = size - 1;

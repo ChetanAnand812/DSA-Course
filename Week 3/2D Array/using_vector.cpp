@@ -11,6 +11,9 @@ int main(){
     vector<int> b{2,4,6};
     vector<int> c{1,3,7};
 
+    arr.push_back(a);
+    arr.push_back(b);
+    arr.push_back(c);
     arr.push_back(5);
     arr.pop_back(5);
     arr.size(a);
