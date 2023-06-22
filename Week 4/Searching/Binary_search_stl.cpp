@@ -3,39 +3,6 @@
 #include <algorithm>
 using namespace std;
 
-/* 
-int binarySearch(int arr[], int size, int target) {
-  int start = 0;
-  int end = size - 1;
-
-  int mid = start + (end - start ) / 2;
-
-  while(start <= end) {
-
-    if(arr[mid] == target) {//element found, then return index
-      return mid;
-    }
-    
-    if(target < arr[mid]) {
-      //search in left
-      end = mid - 1;
-    }
-    else {
-      //search in right
-      start = mid + 1;
-    }
-
-    mid = start + (end - start ) / 2;
-
-  }
-
-  //element not found
-  return -1;
-
-}
-
-*/
-
 int main(){
 
     /*
