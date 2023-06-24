@@ -70,3 +70,21 @@ int main(){
     return 0;
 
 }
+
+
+-------------------------------------------------------------------------
+
+int main() {
+    int n; 
+    cin>>n; // taking size of vector from user
+    vector<int> v(n);
+    for(int i=0 ; i<v.size() ; i++)
+    {
+        cin>>v[i];
+    }
+    for(int i=0; i<v.size(); i++){
+        cout<< v[i] <<" ";
+    }
+    cout<<endl;
+    return 0;
+}
