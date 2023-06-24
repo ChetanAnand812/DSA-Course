@@ -61,4 +61,4 @@ int main(){
     
 }
 
-// Time complexity = log(n)
+// Time complexity = O(log(n))

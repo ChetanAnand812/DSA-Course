@@ -1,9 +1,10 @@
-#include<bits/stdc++.h>
-#include <vector>
+#include<iostream>
+#include<vector>
 #include<algorithm>
 using namespace std;
 
-int firstOccurence(vector<int> arr, int target){
+
+int lastOccurence(vector<int> arr, int target){
     int s = 0;
     int e = arr.size() - 1;
 
@@ -12,9 +13,9 @@ int firstOccurence(vector<int> arr, int target){
 
     while(s <= e){
         if(arr[mid] == target){
-            // ans store and then left
+            // ans store and then right
             ans = mid;
-            e = mid - 1;
+            s = mid + 1;
         }
         else if(target > arr[mid]){
             s = mid + 1;
@@ -27,12 +28,11 @@ int firstOccurence(vector<int> arr, int target){
     return ans;
 }
 
-
 int main() {
     int size; 
     cout<<"Enter Size: "<<endl;
     cin>>size; 
-
+    
     vector<int> v(size);
     cout<<"Enter element: "<<endl;
     for(int i=0 ; i<v.size() ; i++){
@@ -43,12 +43,12 @@ int main() {
     cout<<"Enter target: "<<endl;
     cin>>target;
 
-    int ans1 = firstOccurence(v, target);
-    cout<<"Index is "<< ans1 <<endl;
+    int ans = lastOccurence(v, target);
+    cout<<"Index is "<< ans <<endl;
 
 
     // using stl
-    auto ans2 = lower_bound(v.begin(), v.end(), target);
+    auto ans2 = upper_bound(v.begin(), v.end(), target);
     cout<<"Index is "<< ans2-v.begin() <<endl;
 
     return 0;
