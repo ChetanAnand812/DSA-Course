@@ -18,7 +18,8 @@ int peakElement(vector<int> arr){
 
         mid = s + (e-s)/2;
     }
-    return s;
+    return arr[s];
+    // return s; here you will get the index of peak element
 }
 
 int main(){
@@ -32,6 +33,6 @@ int main(){
         cin>>v[i];
     }
     
-    cout<<"Peak Element at index: " <<peakElement(v);
+    cout<<"Peak Element is: " <<peakElement(v);
 
 }
