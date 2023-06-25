@@ -10,6 +10,7 @@ int peakElement(vector<int> arr){
 
     while(s < e){
         if(arr[mid] < arr[mid+1]){
+            // right
             s = mid + 1;
         }
         else{
