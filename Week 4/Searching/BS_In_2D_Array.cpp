@@ -15,7 +15,7 @@ bool binarySearch(int arr[][100], int row, int col, int target){
         }
         if(arr[rowIndex][colIndex] < target){
             // right search
-            s = mid + 1;
+            s = mid + 1; 
         }
         else{
             // left search
