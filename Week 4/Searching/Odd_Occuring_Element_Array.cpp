@@ -15,8 +15,8 @@ int oddOccurance(vector<int>arr){
 
         // Case 1 --> mid - even 
         if(mid % 2 == 0){
-            if(arr[mid] == arr[mid+1]){
-                s = mid + 2; // right serach
+            if(arr[mid] == arr[mid+1]){ // present in left side of answer
+                s = mid + 2; // then right serach
             }
             else{
                 e = mid;
