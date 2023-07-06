@@ -10,7 +10,8 @@ int solve(int dividend, int divisor){
     while(s <= e){
         // perfect solution
         if(abs(mid*divisor) == abs(dividend)) {
-            return mid;
+            ans = mid;
+            break;
         }
         // not perfect solution
         if(abs(mid*divisor) > abs(dividend)){
