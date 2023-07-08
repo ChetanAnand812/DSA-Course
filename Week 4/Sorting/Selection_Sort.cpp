@@ -13,9 +13,11 @@ int main(){
     }
 
     // Selection Sort
+    // outer loop -> (n-1) rouns
     for(int i=0; i<arr.size()-1; i++){
 
         int minIndex = i;
+        // inner loop -> index of min element in range i to n
         for(int j=i+1; j<arr.size(); j++){
             if(arr[j] < arr[minIndex]){
                 // new minimum, then store
