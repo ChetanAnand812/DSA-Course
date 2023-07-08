@@ -12,20 +12,17 @@ int main(){
         cin>>arr[i];
     }
 
-    // Selection Sort
-    // outer loop -> (n-1) rounds
-    for(int i=0; i<arr.size()-1; i++){
+    // Bubble Sort
+    // outer loop -> n rounds
+    for(int round=1; round<arr.size(); round++){
 
-        int minIndex = i;
-        // inner loop -> index of min element in range i to n
-        for(int j=i+1; j<arr.size(); j++){
-            if(arr[j] < arr[minIndex]){
-                // new minimum, then store
-                minIndex = j;
+        for(int j=0; j<arr.size()-round; j++){
+
+            if(arr[j] > arr[j+1]){
+                swap(arr[j], arr[j+1]);
             }
+
         }
-        // swap
-        swap(arr[i], arr[minIndex]);
     }
 
     cout<<"Sorted Array is"<<endl;
