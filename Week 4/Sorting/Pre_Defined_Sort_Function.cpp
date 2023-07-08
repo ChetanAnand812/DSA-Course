@@ -14,6 +14,7 @@ int main(){
     }
 
     sort(arr.begin(), arr.end());
+    // In Array -- sort(arr, arr + n)
 
     cout<<"Sorted Array is"<<endl;
     for(int i=0; i<arr.size(); i++){
