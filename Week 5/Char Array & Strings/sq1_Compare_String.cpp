@@ -25,7 +25,8 @@ int main(){
     cout<<"Enter String b: "<<endl;
     getline(cin, b);
 
-    cout<<compareString(a, b)<<endl;
+    bool isEqual = compareString(a, b);
+    cout<<"The strings are " << (isEqual ? "equal" : "not equal") << endl;
     return 0;
 
 }
