@@ -18,7 +18,6 @@ class Node {
         //TODO: Write a destrcutor to delete a node
         ~Node() {
                 //write your code here
-                
                 cout << "Node with value: " << this->data << "deleted" << endl;
         }
 };
@@ -42,7 +41,6 @@ void insertAtHead(Node* &head, Node* &tail, int data) {
 
 
 }
-
 //I want to insert a node right at the end of LINKED LIST
 void insertAtTail(Node* &head,Node* &tail, int data) {
         if(head == NULL) {
@@ -78,7 +76,6 @@ int findLength(Node* &head ) {
         return len;
 }
 
-// Insert at Middle
 void insertAtPosition(int data, int position, Node* &head, Node* &tail) {
         if(head == NULL) {
                 Node* newNode = new Node(data);
@@ -118,7 +115,6 @@ void insertAtPosition(int data, int position, Node* &head, Node* &tail) {
         prev -> next = newNode;
 }
 
-// Delete Node
 void deleteNode(int position, Node* &head, Node* &tail) {
         if(head == NULL) {
                 cout << "Cannot delete, LL is empty";
@@ -176,6 +172,45 @@ void deleteNode(int position, Node* &head, Node* &tail) {
 
 }
 
+Node* reverse(Node* &prev, Node* &curr) {
+        //base case
+        if(curr == NULL) {
+                //LL reverse ho chuki
+                return prev;
+        }
+        
+        //1 case solve then recursion will take care
+        Node* forward = curr -> next;
+        curr -> next = prev;
+
+        reverse(curr, forward);
+}
+
+Node* reverseusingLoop(Node* head ) {
+        Node* prev = NULL;
+        Node* curr = head;
+
+        while(curr != NULL ) {
+                Node* temp = curr ->next;
+                curr ->next = prev;
+                prev = curr;
+                curr = temp;
+        }
+        return prev;
+}
+Node* reverseusingRecursion(Node* prev, Node* curr) {
+        //base case
+        if(curr == NULL) 
+                return prev;
+
+        Node* temp = curr ->next;
+        curr ->next = prev;
+        prev = curr;
+        curr = temp;
+
+        //recursion sambhal lega
+        return reverseusingRecursion(prev, curr);
+}
 int main() {
 
         Node* head = NULL;
@@ -198,7 +233,15 @@ int main() {
         // cout << "head: " << head -> data << endl;
         // cout << "tail: " << tail->data << endl;
 
-        deleteNode(90, head, tail);
+       // deleteNode(9, head, tail);
+        // cout << endl;
+        // print(head);
+         cout << endl;
+
+        Node* prev = NULL;
+        Node* curr = head;
+        cout << "printing reverse list" << endl;
+        head = reverseusingRecursion(prev, curr);
         cout << endl;
         print(head);
         cout << endl;
